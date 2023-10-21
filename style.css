@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@keyframes example {
+  0% {
+    background-color: red;
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    color: blue;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    color: red;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    color: yellow;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+.header {
+  text-align: center;
+  padding: 32px;
+  background-color: whitesmoke;
+  font-weight: bolder !important;
+  font-family: "Dancing Script", cursive;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-bottom: 40px;
+}
+.header > h1 {
+  font-size: 50px !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+.column {
+  max-width: 25%;
+  padding: 0 4px;
+  align-items: center;
+}
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@keyframes img {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+.column img {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  tansition: width 10s height 5s;
+  border-radius: 10px;
+  animation-name: img;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.img1 {
+  align-self: flex-start;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
